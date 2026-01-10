@@ -3,6 +3,8 @@ FROM php:8.4-fpm-alpine
 WORKDIR /app
 COPY . .
 
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 RUN composer install
 RUN composer require laravel/octane
 COPY .envDev .env
