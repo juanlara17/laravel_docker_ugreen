@@ -1,4 +1,4 @@
-FROM elrincondeisma/php-for-laravel:8.3.7
+FROM php:8.4-fpm-alpine
 
 WORKDIR /app
 COPY . .
